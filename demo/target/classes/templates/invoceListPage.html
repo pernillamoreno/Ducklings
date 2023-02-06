@@ -1,0 +1,55 @@
+<form action="userSession/logout" method="POST">
+    <button type="submit">Logout</button>
+</form>
+
+<form action="invoiceList" method="POST">
+    <title>HomePage</title>
+    <title>InvoiceList</title>
+    <label>Title</label>
+    <input type="text" name="name" />
+    <br>
+    <label>Category</label>
+    <input type="number" name="quantity" />
+    <br>
+    <label>id</label>
+    <input type="text" name="id" />
+    <br>
+    <label>Description</label>
+    <input type="text" name="description" />
+    <br>
+    <label>Created</label>
+    <input type="date" name="created">
+    <br>
+    <label>Amount</label>
+    <input type="text" name="Amount">
+    <br>
+    <button type="submit">Add item</button>
+</form>
+
+
+<!--<div th:each="item: ${items}">
+    <p th:text="${item.name}" />
+</div> -->
+
+<table>
+    <thead>
+    <tr><th>Title</th>
+        <th>Category</th>
+        <th>Id</th>
+        <th>Description</th>
+        <th>Date</th>
+        <th>Amount</th>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr th:each="item: ${items}">
+        <td th:text="${item.name}" />
+        <td th:text="${item.quantity}" />
+        <td th:text="${item.description}" />
+        <td th:text="${item.description}" />
+        <td th:text="${item.description}" />
+
+    </tr>
+    </tbody>
+</table>
