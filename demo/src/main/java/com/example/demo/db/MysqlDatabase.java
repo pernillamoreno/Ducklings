@@ -11,7 +11,7 @@ public class MysqlDatabase {
     private Connection connection;
 
     private MysqlDatabase() {
-        String url = "jdbc:mysql://localhost:3306/awshopping2";
+        String url = "jdbc:mysql://localhost:3306/databasname";
 
         try {
             Class.forName("com.mysql.cj.jdbc.Driver");
