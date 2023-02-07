@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Invoice List</title>
+</head>
+<body>
+<h3 th:text="'Welcome to My Pages at DuckCo :  ' + ${user}"/>
+<table>
+    <thead>
+    <tr>
+        <br>
+        <th>ID</th>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Description</th>
+        <th>Amount</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="invoice: ${invoices}">
+        <td th:text="${invoice.invoiceId}" />
+        <td th:text="${invoice.title}" />
+        <td th:text="${invoice.description}" />
+        <td th:text="${invoice.category}" />
+        <td th:text="${invoice.amount}" />
+    <br>
+    <br>
+<td><a th:href="@{'/invoice/delete/' + ${invoice.invoiceId}}"><button>Delete Invoice</button></a></td>
+<br>
+<td><a th:href="@{'/invoice/editpage/' + ${invoice.invoiceId}}"><button>Edit</button></a></td>
+</tbody>
+</table>
+<br>
+<a href="invoice/new"><button>Register New Invoice</button></a>
+<br/><br/>
+<a href="/auth/logout"><button>Logout</button></a>
+
+</body>
+</html>

@@ -1,0 +1,30 @@
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<a href="/invoice"><button>Home</button></a>
+
+<h1>Invoice Registration</h1>
+
+<form action="/invoice" method="POST">
+  <div>
+    <label>Title</label>
+    <input type="text" name="title">
+  </div>
+  <div>
+    <label>Description</label>
+    <input type="text" name="description">
+  </div>
+  <div>
+    <label>Category</label>
+    <input type="text" name="category">
+  </div>
+  <div>
+    <label>Amount</label>
+    <input type="number" name="amount">
+  </div>
+  <br>
+
+  <button type="submit">ADD TO DUCKco</button>
+
+</form>
+
+</html>
